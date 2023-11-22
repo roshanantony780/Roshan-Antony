@@ -1,0 +1,82 @@
+<html>
+<head>
+<title></title>
+<script>
+function fact(b)
+{
+	var a,b,c;
+	a=1;
+	for(c=1;c<=b;++c)
+	{
+		a=c*a;
+	}
+return a;
+}
+function permu()
+{
+	
+	var a,b,c,d;
+	b=document.f1.t1.value;
+	c=document.f1.t2.value;
+if(b<c)
+{
+	alert("Syntax Error");
+}
+else
+{
+	d=b-c;
+	a=(fact(b)/fact(d));
+	document.f2.t3.value=a;
+}
+}
+function combo()
+{
+	var a,b,c,d,e;
+	b=document.f1.t1.value;
+	c=document.f1.t2.value;
+if(b<c)
+{
+	alert("Syntax Error");
+}
+else{
+	d=b-c;
+	e=fact(d)*fact(c);
+	a=(fact(b)/e);
+	document.f2.t3.value=a;
+}
+}
+</script>
+<body bgcolor="purple" topmargin="200px" leftmargin="300px">
+<form name="f1">
+Enter the Number of Objects 
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+<Input type="text"  name="t1">
+		<br><br><br><br>
+Enter the Number of Ways
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<Input type="text"  name="t2">
+		<br><br><br><br>
+<Center>
+<Input type="button" value="Permutation" onClick="permu()">
+		&nbsp;&nbsp;&nbsp;&nbsp;
+<Input type="button" value="Combination" onClick="combo()">
+				&nbsp;&nbsp;&nbsp;&nbsp;
+<Input type="submit" value="clear" >
+</Center><br><br><br>
+</form>
+<form name="f2">
+Result
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		
+		
+<Input type="text" name="t3">
+</form>
+</body>
+</html>
